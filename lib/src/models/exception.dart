@@ -1,0 +1,4 @@
+class DivideByZeroException implements Exception {
+
+  
+}
