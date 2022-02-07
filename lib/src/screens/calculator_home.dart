@@ -30,12 +30,18 @@ class _CalculatorHomePageState extends State<CalculatorHomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
+              themeProvider.darkTheme == true ? IconButton(
+                    onPressed: () {
+                    },
+                    icon:  Icon(Icons.light_mode_outlined, color: Colors.grey.shade800,)):  IconButton(
                     onPressed: () {
                       themeProvider.dartTheme = !themeProvider.darkTheme;
                     },
                     icon: const Icon(Icons.light_mode_outlined)),
-                IconButton(
+              themeProvider.darkTheme == false ? IconButton(
+                    onPressed: () {
+                    },
+                    icon:  Icon(Icons.mode_night_outlined, color: Colors.black26,)):  IconButton(
                     onPressed: () {
                       themeProvider.dartTheme = !themeProvider.darkTheme;
                     },
